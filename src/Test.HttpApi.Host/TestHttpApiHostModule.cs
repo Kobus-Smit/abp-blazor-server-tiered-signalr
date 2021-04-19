@@ -19,6 +19,7 @@ using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
 using Volo.Abp.AspNetCore.Serilog;
+using Volo.Abp.AspNetCore.SignalR;
 using Volo.Abp.Autofac;
 using Volo.Abp.Caching;
 using Volo.Abp.Caching.StackExchangeRedis;
@@ -37,7 +38,8 @@ namespace Test
         typeof(TestApplicationModule),
         typeof(TestMongoDbModule),
         typeof(AbpAspNetCoreSerilogModule),
-        typeof(AbpSwashbuckleModule)
+        typeof(AbpSwashbuckleModule),
+        typeof(AbpAspNetCoreSignalRModule)
     )]
     public class TestHttpApiHostModule : AbpModule
     {
